@@ -17,10 +17,10 @@ pipeline {
 
     post {
         success {
-            // Any steps to perform after a successful build
+            echo 'Deployment successful' // Add any steps you want to perform on success
         }
         failure {
-            // Any steps to perform after a failed build
+            echo 'Deployment failed' // Add any steps you want to perform on failure
         }
     }
 }
