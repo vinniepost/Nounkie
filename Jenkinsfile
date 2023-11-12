@@ -6,10 +6,10 @@ pipeline {
             steps {
                 script {
                     // Ensure Docker Compose is installed
-                    sh "command -v docker-compose >/dev/null || { echo 'Docker Compose is not installed.'; exit 1; }"
+                    sh "command -v docker compose >/dev/null || { echo 'Docker Compose is not installed.'; exit 1; }"
 
                     // Execute Docker Compose up command
-                    sh "docker-compose -f .devcontainer/docker-compose.yml up -d"
+                    sh "docker compose -f .devcontainer/docker-compose.yml up -d"
                 }
             }
         }
